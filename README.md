@@ -21,4 +21,3 @@ print(Hello World!)
 
 
 |tabela 1|tabela 2|
-|--------|--------|
