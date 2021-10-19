@@ -5,9 +5,9 @@ Dzień 19 pażdziernika był *bardzo* ciepłym dniem, niesamowite, że już za c
 
 ### listy i listy
 numbered lists:
-1.Gimnazjum
-2.Liceum
-3.Studia
+1. Gimnazjum
+2. Liceum
+3. Studia
 
 bullet points:
 * zima 
