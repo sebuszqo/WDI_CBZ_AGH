@@ -16,6 +16,7 @@ bullet points:
   * wiosna  
 
 ```pyhton
+if __name__ = 'main'
 print(Hello World!)
 ```
 
