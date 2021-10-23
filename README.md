@@ -14,6 +14,13 @@ bullet points:
 * jesien 
   * lato
   * wiosna  
+  
+Alternatively,
+
+- Dashes work just as well
+- And if you have sub points, put two spaces before the dash or star:
+  - Like this
+  - And this
 
 ```pyhton
 if __name__ = 'main'
@@ -23,5 +30,8 @@ print(Hello World!)
 
 |tabela 1|tabela 2|
 |--------|--------|
+
+
+[alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Calico_tabby_cat_-_Savannah.jpg/1200px-Calico_tabby_cat_-_Savannah.jpg)
 
 
