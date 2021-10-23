@@ -25,4 +25,4 @@ print(Hello World!)
 |--------|--------|
 
 
-![alt text]https://github.com/sebuszqo/WDI/blob/main/laboratorium2/cat.jpg
+![alt text]https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Calico_tabby_cat_-_Savannah.jpg/1200px-Calico_tabby_cat_-_Savannah.jpg
