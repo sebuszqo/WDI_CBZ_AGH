@@ -23,3 +23,4 @@ print(Hello World!)
 
 |tabela 1|tabela 2|
 |--------|--------|
+![alt text]https://github.com/sebuszqo/WDI/blob/main/laboratorium2/cat.jpg
