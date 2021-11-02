@@ -1,4 +1,5 @@
 import random
+if __name__ == '__main__': 
 
 g = int(input("Podaj prosze jaka wysokosc ma miec twoja choinka: "))
 
@@ -45,3 +46,4 @@ for i in range(g):
 for i in range(g):
     print(" ", end="")
 print("U")
+
