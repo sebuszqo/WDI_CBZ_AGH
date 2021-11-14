@@ -3,6 +3,7 @@ from math import sqrt
 
 def results(a, b, c):
     delta = b*b - 4*a*c
+    print(f"Delta jest równa: {delta}")
     try:
         if delta > 0:
             x1 = (-b-sqrt(delta))/(2*a)
@@ -30,15 +31,16 @@ def results(a, b, c):
             x2 = (-b+sqrt(delta))/(2*a)
 
     except ValueError:
-        return("Program nie obsługuje liczb zespolonych")
+        print("Program nie obsługuje liczb zespolonych")
 
-
-while True:
-    print("--------------------------------")
-    print('Równanie kwadratowe ax^2+bx+c=0')
-    print("--------------------------------")
-    a = int(input('1. Wartość parametru a: '))
-    b = int(input('2. Wartość parametru b: '))
-    c = int(input('3. Wartość parametru c: '))
-    print("--------------------------------")
-    results(a, b, c)
+if __name__ == '__main__':
+    
+    while True:
+        print("--------------------------------")
+        print('Równanie kwadratowe ax^2+bx+c=0')
+        print("--------------------------------")
+        a = int(input('1. Wartość parametru a: '))
+        b = int(input('2. Wartość parametru b: '))
+        c = int(input('3. Wartość parametru c: '))
+        print("--------------------------------")
+        results(a, b, c)
