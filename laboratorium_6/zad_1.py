@@ -4,6 +4,7 @@ from math import sqrt
 def results(a, b, c):
     delta = b*b - 4*a*c
     print(f"Delta jest równa: {delta}")
+    print()
     try:
         if delta > 0:
             x1 = (-b-sqrt(delta))/(2*a)
@@ -20,7 +21,7 @@ def results(a, b, c):
 
         elif delta == 0:
             x0 = -b/(2*a)
-            print(f'x0 ={x0}')
+            print(f'x0 = {x0}')
             if x0 > 0:
                 print(f"Postać iloczynowa jest równa: {a}(x-{x0})^2")
             elif x0 < 0:
@@ -33,6 +34,11 @@ def results(a, b, c):
     except ValueError:
         print("Program nie obsługuje liczb zespolonych")
 
+    else:
+        p = (-1*b)/(2*a)
+        q = (-1*delta)/(4*a)
+        print(f"Wierzchołek ma współrzędne (p,q): {p,q}")
+
 if __name__ == '__main__':
     
     while True:
@@ -44,3 +50,19 @@ if __name__ == '__main__':
         c = int(input('3. Wartość parametru c: '))
         print("--------------------------------")
         results(a, b, c)
+
+###Przypadki testowe###
+# delta>0
+# a=1 b=2 c=-3
+# a=2 b=10 c=8
+# a=1 b=-4 c=3
+
+# delta=0
+# a=1 b=2 c=1
+
+# delta<0
+# a=-6 b=3 c=-1
+# a=1 b=2 c=4
+#######################
+
+
