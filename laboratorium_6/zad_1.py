@@ -41,15 +41,19 @@ def results(a, b, c):
 
 if __name__ == '__main__':
     
+
     while True:
-        print("--------------------------------")
-        print('Równanie kwadratowe ax^2+bx+c=0')
-        print("--------------------------------")
-        a = int(input('1. Wartość parametru a: '))
-        b = int(input('2. Wartość parametru b: '))
-        c = int(input('3. Wartość parametru c: '))
-        print("--------------------------------")
-        results(a, b, c)
+        try:
+            print("--------------------------------")
+            print('Równanie kwadratowe ax^2+bx+c=0')
+            print("--------------------------------")
+            a = int(input('1. Wartość parametru a: '))
+            b = int(input('2. Wartość parametru b: '))
+            c = int(input('3. Wartość parametru c: '))
+            print("--------------------------------")
+            results(a, b, c)
+        except:
+            print("Musisz wpisac liczbę całkowita jako wartość parametru!")
 
 ###Przypadki testowe###
 # delta>0
