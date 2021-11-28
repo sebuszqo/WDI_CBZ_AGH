@@ -19,8 +19,8 @@ def nwd(first, second):  # funkcja szukajaca NWD z dwoch liczb
     if second == 0:
         return first
     else:
-        r = first % second
-        return nwd(second, r)
+        s = first % second
+        return nwd(second, s)
 
 
 def problem(tab):  # glowna funkcja dopisujaca oraz sumujaca
@@ -51,24 +51,25 @@ def problem(tab):  # glowna funkcja dopisujaca oraz sumujaca
         first = tab2[0]
         second = tab2[1]
         wynik = nwd(first, second)
-        return print(f"NWD 3 pierwszych liczb to: {wynik}")
+        return print(f"NWD 2 pierwszych liczb to: {wynik}")
 
 
 if __name__ == '__main__':
     # przypadki generowane poprzez losowanie liczb
     # while True:
-    #     n = int(input("Podaj ile liczb mam wpisac w tablice: "))
-    #     tab = [random.randint(1, 100) for i in range(n)]
-    #     problem(tab)
+    # n = int(input("Podaj ile liczb mam wpisac w tablice: "))
+    # tab = [random.randint(1, 100) for i in range(n)]
+    # problem(tab)
 
     # przypadki testowe do sprawdzenia recznego.
     # tab = [7,45,45,34,53,45,4,3,11,18,30]
     # tab = [63, 60, 53, 1, 93, 2, 15, 4, 17, 80]
-    # problem(tab)
+    tab = [52, 95, 26, 13, 46, 39, 27, 45, 87, 80, 77, 77, 93, 17, 43]
+    problem(tab)
 
     ##### Przypadki testowe #####
     # Przypadek nr 1:
-    # output: lista po dodaniu 0
+    # output: lista po dodaniu 0 [52, 95, 26, 13, 0, 46, 39, 27, 45, 87, 80, 77, 77, 93, 17, 0, 43, 0] Wynik: [186, 588, 43]
     # Przypadek nr 2:
     # output: lista po dodaniu 0 [7,0,45,45,34,53,0,45,4,3,0,11,0,18,30]. Wynik: [7, 177, 52, 11]
     # Przypadek nr 3:
