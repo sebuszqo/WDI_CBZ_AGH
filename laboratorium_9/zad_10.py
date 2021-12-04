@@ -1,4 +1,3 @@
-
 from random import randint
 def gen_tab(n):
 
@@ -59,8 +58,8 @@ if __name__ == "__main__":
             raise ValueError
     except ValueError:
         print("wprowadziłeś niepoprawne n, spróbuj ponownie:")
-    Tabliczka= gen_tab(n)
-    one, two = problem_15(Tabliczka)
+    Tabliczkaa= gen_tab(n)
+    one, two = problem_15(Tabliczkaa)
     print(one, two)
 
 
