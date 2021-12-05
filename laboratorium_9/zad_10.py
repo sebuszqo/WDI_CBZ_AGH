@@ -1,7 +1,7 @@
 from random import randint
 def gen_tab(n):
 
-    tab = [[randint(1, 100) for _ in range(n)]for _ in range(n)]
+    tab = [[randint(1, 100) for _ in range(n)]for _ in range(n)] # generowanie listy n x n
     # tab = [
     #     [52, 68, 35, 9, 91, 1, 79, 86], 
     #     [76, 43, 27, 62, 2, 64, 9, 47], 
@@ -16,7 +16,7 @@ def gen_tab(n):
     
     return tab
 
-def is_prime(n):
+def is_prime(n):  # funkcja sprawdzajaca prime
     if n==2 or n == 3:
         return True
     if n % 2 == 0 or n % 3 == 0 or n < 2:
@@ -27,8 +27,8 @@ def is_prime(n):
             return False
         i += 6
     return True
-def has_prime(num):
 
+def has_prime(num):
     while num != 0:
         if is_prime(num % 10):
             return True
@@ -37,8 +37,7 @@ def has_prime(num):
 
 def problem_15(tab):
     long  = len(tab)
-   
-    for i in range(long):
+    for i in range(long): # range long jako dlugosc tablicy 2 petle 
         flag = False
         for j in range(long):
             if has_prime(tab[i][j]):
@@ -46,7 +45,6 @@ def problem_15(tab):
             else:
                 flag = False
                 break
-        
         if flag:
             return True, tab[i]
     return False, "nie ma takiego wiersza"
