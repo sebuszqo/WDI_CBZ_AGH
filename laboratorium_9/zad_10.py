@@ -12,6 +12,11 @@ def gen_tab(n):
     #     [90, 24, 45, 79, 53, 29, 33, 80], 
     #     [31, 35, 21, 86, 29, 32, 77, 24]
     #     ]
+    # tab = [
+    #     [36, 22, 88], 
+    #     [79, 83, 16], 
+    #     [45, 42, 86]
+    #     ]
     print(tab)
     
     return tab
@@ -29,10 +34,10 @@ def is_prime(n):  # funkcja sprawdzajaca prime
     return True
 
 def has_prime(num):
-    while num != 0:
-        if is_prime(num % 10):
+    while num != 0: # petla dziala dopóki liczba nie będzie 0 
+        if is_prime(num % 10): # sprawdzanie czy druga cyfra jest l.pierwsza
             return True
-        num //= 10
+        num //= 10 # dzielenie calkowite aby moc sprawdzic pierwsza liczbe 
     return False
 
 def problem_15(tab):
@@ -40,25 +45,49 @@ def problem_15(tab):
     for i in range(long): # range long jako dlugosc tablicy 2 petle 
         flag = False
         for j in range(long):
-            if has_prime(tab[i][j]):
-                flag = True
+            if has_prime(tab[i][j]): # sprawdzenie dla danego numeru tablicy oraz danego elementu
+                flag = True # jesli has_prime zwroci prawde to oczywiscie flaga jest na true, czyli istnieje taki wiersz
             else:
                 flag = False
                 break
-        if flag:
-            return True, tab[i]
-    return False, "nie ma takiego wiersza"
+        if flag: # jesli flaga jest true to oczywiscie istenieje taki rzad w tablicy[N][N]
+            return True, tab[i] # zwracamy True oraz zwracamy tablice ktora spelnia warunki zadania
+    return False, "Sorri, takiego wiersza brak :("
         
 if __name__ == "__main__":
-    try:
-        n = int(input("podaj wymiar n x n tablicy: "))
-        if n <= 0:
-            raise ValueError
-    except ValueError:
-        print("wprowadziłeś niepoprawne n, spróbuj ponownie:")
-    Tabliczkaa= gen_tab(n)
-    one, two = problem_15(Tabliczkaa)
-    print(one, two)
+    while True:
+        try: # wyjątek dla wprowadzonego n <= 1, (taka tablica, jest bezsensowna)
+            n = int(input("Podaj wymiar n x n tablicy: "))
+            if n <= 1:
+                raise ValueError
+        except ValueError:
+            print("Sorri, Wprowadziłeś niepoprawne n, spróbuj ponownie:")
+            continue
+        Tabliczkaa= gen_tab(n)
+        one, two = problem_15(Tabliczkaa)
+        print(one, two)
 
-
-   
+#### Przypadki testowe ####
+# Przykład nr 1: 
+# # tab = [
+#     [52, 68, 35, 9, 91, 1, 79, 86],  
+#     [76, 43, 27, 62, 2, 64, 9, 47], 
+#     [22, 83, 53, 17, 24, 27, 26, 36], 
+#     [82, 78, 43, 46, 18, 38, 1, 58], 
+#     [71, 22, 40, 15, 55, 94, 89, 26], 
+#     [63, 93, 51, 18, 23, 59, 57, 27], 
+#     [90, 24, 45, 79, 53, 29, 33, 80], 
+#     [31, 35, 21, 86, 29, 32, 77, 24]
+#     ]  
+# output: True [22, 83, 53, 17, 24, 27, 26, 36]
+# Przykład nr 2: 
+# tab =[
+#         [36, 22, 88],
+#         [79, 83, 16],
+#         [45, 42, 86]
+#     ] 
+# output: False Sorri, takiego wiersza brak :(
+# Przykład nr 3:
+#               losowe liczby: n <= 0
+# Przykład nr 4:
+#       n = 1000 (PROBLEM?)
