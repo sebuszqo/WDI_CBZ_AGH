@@ -1,3 +1,9 @@
+# Proszę napisać program wczytujący tablicę dwuwymiarową o ustalonym wymiarze n×n wypełnioną liczbami naturalnymi. 
+# Dla danej tablicy należy napisać funkcję, która odpowiada na pytanie, 
+# czy w tablicy istnieje wiersz, w którym każda liczba zawiera co najmniej jedną cyfrę będącą liczbą pierwszą. 
+# Wymiar tablicy powinien być definiowany przez użytkownika. 
+
+
 from random import randint
 def gen_tab(n):
 

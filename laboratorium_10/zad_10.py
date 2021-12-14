@@ -1,3 +1,6 @@
+from os import error
+
+
 def plik(str,s):
     if s == "Y" or s == "y":
         print(str)
@@ -14,12 +17,20 @@ if __name__ == "__main__":
         f_names = {"1":"lorem.txt", "2":"opis_kota.txt", "3":"opis_psa.txt", "4":"opis_małpy.txt"} 
         print()
         n = input(f"Witaj użytkowniku, wybierz który plik chcesz sprawdzić:\n {f_names} \n:")
-        print()
-        s = input("Czy chcesz wyświetlić ten plik ? (Y/N): ")
-        file_r = f_names[n]
-        with open(file_r, "r", encoding="utf-8") as f:
-            str = f.read()
-        print(plik(str,s))
+        try:
+            key_to_lookup = f"{n}"
+            if key_to_lookup in f_names:
+                file_r = f_names[n]
+                s = input("Czy chcesz wyświetlić ten plik ? (Y/N): ")
+                with open(file_r, "r", encoding="utf-8") as f:
+                    str = f.read()
+                print()
+                print(plik(str,s))
+            else:
+                raise KeyError
+        except KeyError:
+            print("podany klucz nie istnieje, spróbuj ponownie")
+            continue
 
 ### Przypadki testowe ###
 # Plik nr 1 (lorem.txt):
@@ -29,7 +40,9 @@ if __name__ == "__main__":
 # Plik nr 3 (opis_psa.txt):
 # Ilość słów: 359
 # Plik nr 4 (opis_małpy.txt):
-# Ilość słów: 276
+# Ilość słów: 275
+
+
 
 
 

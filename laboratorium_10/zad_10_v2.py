@@ -1,7 +1,7 @@
 import re
 
 def plik():
-    with open("opis_małpy.txt", "r", encoding="utf-8") as f:
+    with open("opis_psa.txt", "r", encoding="utf-8") as f:
         tekst = f.read()
         tekst = tekst + " "
         wzor = " "
@@ -18,5 +18,3 @@ if __name__ == "__main__":
 # Ilość słów: 39
 # Plik nr 3 (opis_psa.txt):
 # Ilość słów: 359
-# Plik nr 4 (opis_małpy.txt):
-# Ilość słów: 276
