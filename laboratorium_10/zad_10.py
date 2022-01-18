@@ -1,5 +1,4 @@
 
-
 def words(str, s):
     if s == "Y" or s == "y":
         print(str)
